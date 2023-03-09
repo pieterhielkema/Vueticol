@@ -1,5 +1,5 @@
 # Vueticol
-Pretty color picker for Vue 🌈
+Beautiful color picker for Vue 🌈
 
 <img src="screenshots.png" width="100%">
 
@@ -9,9 +9,7 @@ https://demos.pieterhielkema.nl/vueticol
 
 ## Installation
 
-You can install the package via yarn:
-
-npm:
+You can install the package via npm:
 
 ```bash
 npm install @pieterhielkema/vueticol --save
@@ -20,9 +18,13 @@ npm install @pieterhielkema/vueticol --save
 ## Usage
 
 ```
-    <vueticol v-model="color" />
+<vueticol v-model="color" />
 ```
 
-### Security
+### Options
 
-If you discover any security related issues, please contact pieter@codesound.nl instead of using the issue tracker.
+| Name       | Type          | Default        | Description                      |
+|------------|---------------|----------------|----------------------------------|
+| colors     | array<string> | See screenshot | Array of colors                  |
+| style      | string        | "square"       | If you want a square or a circle |
+| removeText | string        | "Remove color" | Text for remove button           |
