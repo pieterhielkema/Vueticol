@@ -1,0 +1,23 @@
+{
+  "name": "vueticol",
+  "version": "1.0.0",
+  "description": "Pretty color picker for Vue 🌈",
+
+  "main": "dist/vueticol.ssr.js",
+  "module": "dist/vueticol.esm.js",
+  "unpkg": "dist/vueticol.min.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pieterhielkema/Vueticol.git"
+  },
+  "author": "Pieter Hielkema",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pieterhielkema/Vueticol/issues"
+  },
+  "homepage": "https://github.com/pieterhielkema/Vueticol#readme"
+}
