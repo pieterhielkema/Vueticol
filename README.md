@@ -12,7 +12,7 @@ https://demos.pieterhielkema.nl/vueticol
 You can install the package via npm:
 
 ```bash
-npm install @pieterhielkema/vueticol --save
+npm i vueticol
 ```
 
 ## Usage
