@@ -1,21 +1,25 @@
-import vueticol from 'vueticol.vue';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var vueticol = require('vueticol.vue');
 
 // Import vue component
 
 // Declare install function executed by Vue.use()
 function install(Vue) {
-    if (install.installed) { return; }
+    if (install.installed) return;
     install.installed = true;
     Vue.component('Vueticol', vueticol);
 }
 
 // Create module definition for Vue.use()
-var plugin = {
-    install: install,
+const plugin = {
+    install,
 };
 
 // Auto-install when vue is found (eg. in browser via <script> tag)
-var GlobalVue = null;
+let GlobalVue = null;
 if (typeof window !== 'undefined') {
     GlobalVue = window.Vue;
 } else if (typeof global !== 'undefined') {
@@ -25,5 +29,5 @@ if (GlobalVue) {
     GlobalVue.use(plugin);
 }
 
-export default component;
-export { install };
+exports.default = plugin;
+exports.install = install;
