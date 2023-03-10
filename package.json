@@ -1,6 +1,6 @@
 {
   "name": "vueticol",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pretty color picker for Vue 🌈",
 
   "main": "dist/vueticol.ssr.js",
@@ -17,12 +17,12 @@
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vueticol.min.js"
   },
   "devDependencies": {
-    "rollup": "^1.17.0",
-    "@rollup/plugin-buble": "^0.21.3",
-    "@rollup/plugin-commonjs": "^11.1.0",
-    "rollup-plugin-vue": "^5.0.1",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "rollup": "^3.19.0",
+    "@rollup/plugin-buble": "^1.0.2",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "vue": "^3.2.47",
+    "vue-template-compiler": "^2.7.14"
   },
   "repository": {
     "type": "git",
