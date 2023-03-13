@@ -1,20 +1,21 @@
 {
   "name": "vueticol",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Pretty color picker for Vue 🌈",
+  "type": "module",
   "main": "dist/vueticol.js",
   "module": "dist/vueticol.mjs",
   "files": [
     "dist/*"
   ],
-
   "scripts": {
     "build": "rollup -c"
   },
   "devDependencies": {
     "rollup": "^3.19.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-vue": "^6.0.0"
+    "rollup-plugin-vue": "^6.0.0",
+    "rollup-plugin-import-css": "^3.2.1"
   },
   "peerDependencies": {
     "vue": "^3"
