@@ -11,8 +11,18 @@ https://demos.pieterhielkema.nl/vueticol
 
 You can install the package via npm:
 
-```bash
+``` Install
 npm i vueticol
+```
+
+## Import
+```
+import Vueticol from 'vueticol';
+import 'vueticol/dist/vueticol.css';
+```
+
+```
+app.use(Vueticol);
 ```
 
 ## Usage
