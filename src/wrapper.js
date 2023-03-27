@@ -3,7 +3,6 @@ import vueticol from'./vueticol.vue';
 export default {
     install: (app, options) => {
         app
-            .component("Vueticol", vueticol)
             .directive('vueticol-click-outside', {
                 beforeMount: (el, binding) => {
                     el.clickOutsideEvent = event => {
@@ -16,6 +15,7 @@ export default {
                 unmounted: el => {
                     document.removeEventListener("click", el.clickOutsideEvent);
                 },
-            });
+            })
+            .component("Vueticol", vueticol);
     }
 }

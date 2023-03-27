@@ -1,4 +1,4 @@
-import { openBlock, createElementBlock, createElementVNode, normalizeClass, normalizeStyle, createCommentVNode, withModifiers, Fragment, renderList, toDisplayString, pushScopeId, popScopeId } from 'vue';
+import { resolveDirective, openBlock, createElementBlock, withDirectives, normalizeClass, normalizeStyle, createCommentVNode, withModifiers, createElementVNode, Fragment, renderList, toDisplayString, pushScopeId, popScopeId } from 'vue';
 
 var script = {
 	name: 'Vueticol',
@@ -48,6 +48,11 @@ var script = {
 			}
 		}
 	},
+	methods: {
+		close() {
+			this.isOpen = false;
+		}
+	}
 };
 
 const _withScopeId = n => (pushScopeId("data-v-34948904"),n=n(),popScopeId(),n);
@@ -93,8 +98,10 @@ const _hoisted_8 = [
 ];
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  const _directive_vueticol_click_outside = resolveDirective("vueticol-click-outside");
+
   return (openBlock(), createElementBlock("div", null, [
-    createElementVNode("div", {
+    withDirectives((openBlock(), createElementBlock("div", {
       class: normalizeClass(["vueticol-wrapper", $props.style]),
       onClick: _cache[2] || (_cache[2] = $event => ($data.isOpen = !$data.isOpen)),
       style: normalizeStyle({background:$options.selectedColor ? $options.selectedColor : '#dddddd'})
@@ -131,7 +138,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
               : createCommentVNode("v-if", true)
           ]))
         : createCommentVNode("v-if", true)
-    ], 6 /* CLASS, STYLE */)
+    ], 6 /* CLASS, STYLE */)), [
+      [_directive_vueticol_click_outside, $options.close]
+    ])
   ]))
 }
 
@@ -141,7 +150,21 @@ script.__file = "src/vueticol.vue";
 
 var wrapper = {
     install: (app, options) => {
-        app.component("Vueticol", script);
+        app
+            .directive('vueticol-click-outside', {
+                beforeMount: (el, binding) => {
+                    el.clickOutsideEvent = event => {
+                        if (!(el === event.target || el.contains(event.target))) {
+                            binding.value();
+                        }
+                    };
+                    document.addEventListener("click", el.clickOutsideEvent);
+                },
+                unmounted: el => {
+                    document.removeEventListener("click", el.clickOutsideEvent);
+                },
+            })
+            .component("Vueticol", script);
     }
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "vueticol",
-  "version": "1.0.6",
+  "version": "1.0.15",
   "description": "Pretty color picker for Vue 🌈",
   "type": "module",
   "main": "dist/vueticol.js",
