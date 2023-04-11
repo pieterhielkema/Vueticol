@@ -9,7 +9,8 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "npm update && rollup -c",
+    "publish": "npm build && npm publish"
   },
   "devDependencies": {
     "rollup": "^3.19.0",
