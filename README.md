@@ -3,10 +3,6 @@ Beautiful color picker for Vue 🌈
 
 <img src="screenshots.png" width="100%">
 
-## Demo
-
-https://demos.pieterhielkema.nl/vueticol
-
 ## Installation
 
 You can install the package via npm:
