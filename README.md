@@ -1,5 +1,5 @@
-# Vueticol
-Beautiful color picker for Vue 🌈
+# Vueticol 3
+Beautiful color picker for Vue 3 🌈
 
 <img src="screenshots.png" width="100%">
 
